@@ -2,8 +2,10 @@ const Garrosh = new Fighter("Garrosh");
 const Uther = new Paladin("Uther");
 const Khadgar = new Mago("Khadgar");
 const Shen = new Monk("Shen");
+const Rexxar = new Hunt("Rexxar");
+const GulDan = new Warlock("GulDan");
 
-let players = [Garrosh, Uther, Khadgar, Shen];
+let players = [Garrosh, Uther, Khadgar, Shen, Rexxar, GulDan];
 
 const Go = new Game(players);
 

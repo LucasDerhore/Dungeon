@@ -45,7 +45,9 @@ class Turn extends Game {
           player.constructor.name == "Fighter" ||
           player.constructor.name == "Paladin" ||
           player.constructor.name == "Monk" ||
-          player.constructor.name == "Mago"
+          player.constructor.name == "Mago" ||
+          player.constructor.name == "Hunt" ||
+          player.constructor.name == "Warlock"
         ) {
           player.specialMove(this.chooseTarget(player));
         } else {
