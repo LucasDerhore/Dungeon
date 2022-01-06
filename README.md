@@ -18,3 +18,9 @@ RPG (Battle Royal) incarnez plusieurs héros et battez vous !
 - Attaque spécial pour chaque héro
 - Mana disponnible
 - Récupération de mana quand un kill est fait par le héro
+
+## Tests
+
+Simplement double clique sur l'index, et let's go pour l'aventure !
+
+` Index`
