@@ -30,4 +30,12 @@ class Game {
       return true;
     }
   }
+
+  watchStats(players) {
+    players.map((player) =>
+      alert(
+        `Héro: ${player.name} \nClasse: ${player.constructor.name} \nHP: ${player.hp} \nMana: ${player.mana} \nDégats: ${player.dmg}`
+      )
+    );
+  }
 }

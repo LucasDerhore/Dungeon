@@ -17,7 +17,7 @@ class Turn extends Game {
 
   playerActionsMenu(player) {
     let playerResponse = prompt(
-      `${player.name}, Que veux tu faire ?\n Tape [0] pour attaquer un autre joueur \n Tape [1] pour voir ton attaque spécial \n Tape [2] pour faire ton attaque spécial`
+      `${player.name}, Que veux tu faire ?\n- [0] pour attaquer un autre joueur \n- [1] pour voir tes stats \n- [2] pour voir les stats des autres héros \n- [3] pour voir ton attaque spécial \n- [4] pour faire ton attaque spécial`
     );
 
     switch (playerResponse) {
@@ -26,11 +26,21 @@ class Turn extends Game {
         break;
 
       case "1":
-        player.seeSpecialMove();
+        this.watchStatsCurrentPlayer(player);
         this.playerActionsMenu(player);
         break;
 
       case "2":
+        this.watchStatsOtherPlayers(player);
+        this.playerActionsMenu(player);
+        break;
+
+      case "3":
+        player.seeSpecialMove();
+        this.playerActionsMenu(player);
+        break;
+
+      case "4":
         if (
           player.constructor.name == "Fighter" ||
           player.constructor.name == "Paladin" ||
@@ -83,6 +93,14 @@ class Turn extends Game {
         this.pickPlayerRandomly(this.playersAliveAndHaventPlayed())
       );
     }
+  }
+
+  watchStatsOtherPlayers(player) {
+    this.watchStats(this.playersAlive().filter((p) => p != player));
+  }
+
+  watchStatsCurrentPlayer(player) {
+    this.watchStats(this.playersAlive().filter((p) => p == player));
   }
 
   setHasplayedToFalse(players) {

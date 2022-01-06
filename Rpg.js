@@ -9,6 +9,7 @@ const Go = new Game(players);
 
 alert("Bienvenue dans Hacking World !");
 alert("Appuie sur une touche pour commencer la partie");
+alert("Et zééééé Partis !");
 
 while (Go.turnLeft > 0 && !Go.DidSomeoneWin()) {
   Go.newTurn();
