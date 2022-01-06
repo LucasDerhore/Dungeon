@@ -15,7 +15,7 @@ class Hunt extends Character {
 
   seeSpecialMove() {
     alert(
-      `${this.spe}\n- Inflige 9 points de dégats. \n- Coûte 3 points de vie et 30 points de mana.`
+      `${this.spe}\n- Inflige un coup critique de 9 points de dégats. \n- Coûte 3 points de vie et 30 points de mana.`
     );
   }
 }

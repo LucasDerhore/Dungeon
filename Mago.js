@@ -5,7 +5,7 @@ class Mago extends Character {
   }
 
   specialMove(victim) {
-    this.dmg = 7;
+    this.dmg = 8;
     alert(`${this.name} utilise ${this.spe} sur ${victim.name}.`);
     this.dealDamage(victim);
     this.dmg = 2;
